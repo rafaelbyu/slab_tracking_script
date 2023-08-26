@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 import pandas as pd
 #cap = cv2.VideoCapture("hotBox1.avi")
-cap = cv2.VideoCapture("rtsp://10.50.119.124:554/axis-media/media.amp")
+cap = cv2.VideoCapture("")
 import plot_from_csv
 import calculating_deviations
 import datetime as dt
