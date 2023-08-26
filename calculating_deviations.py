@@ -14,8 +14,8 @@ def deviation():
 
     s3_boto3 = boto3.resource(
         's3',
-        aws_access_key_id='YCAJE4aYWO9zunYLNnjxxFMNk',
-        aws_secret_access_key='YCMy3hCu3IeiHb3kyZ0vEOrMNeRMU8P7N1_PEdf4',
+        aws_access_key_id='',
+        aws_secret_access_key='',
         region_name='ru-central-01',
         endpoint_url='https://storage.yandexcloud.net/'
     )
