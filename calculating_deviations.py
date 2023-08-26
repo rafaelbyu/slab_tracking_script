@@ -26,14 +26,14 @@ def deviation():
     #
     for i in range(6, 9):
         file_counter = 0
-        bucket = s3_boto3.Bucket('iba-mks5000-stg')
-        slabs = list(bucket.objects.filter(Prefix=f'MPM/pdaFM__2023-08-{c[8:10]}_1{i}'))
-        # slabs = list(bucket.objects.filter(Prefix=f'MPM/pdaFM__2023-08-23_1{i}'))
+        bucket = s3_boto3.Bucket('')
+        slabs = list(bucket.objects.filter(Prefix=f''))
+        # slabs = list(bucket.objects.filter(Prefix=f''))
         for slab in slabs:
             buffer = io.BytesIO()
             slab_obj = s3_boto3.slab
-            # # slab_obj = s3_boto3.Object(bucket_name='iba-mks5000-stg',
-            # #                            key=f'MPM/pdaFM__2023-08-23_16.01.48.parquet')
+            # # slab_obj = s3_boto3.Object(bucket_name='',
+            # #                            key=f'')
             slab_obj.download_fileobj(buffer)
             slab_df_iba = pd.read_parquet(buffer)
             print(f'файл {slab.key} загружен')
