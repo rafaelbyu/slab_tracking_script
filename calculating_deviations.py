@@ -20,7 +20,7 @@ def deviation():
         endpoint_url='https://storage.yandexcloud.net/'
     )
 
-    name_dir = f'Data_deviation_csv_23'
+    name_dir = f''
     if not os.path.exists(name_dir):
         os.mkdir(name_dir)
     #
@@ -66,9 +66,9 @@ def deviation():
             df_sorted = df.sort_values(by=['Time'], ascending=True)
 
             df_csv = pd.read_csv(
-                f'slab_tracking_script/Data_tracking_csv_{c[8:10]}/slabdata2023-08-{c[8:10]}_1{i}_{file_counter}.csv')
+                f'')
             # df_csv = pd.read_csv(
-            #     f'Data_tracking_csv_23/slabdata2023-08-23_1{i}_{file_counter}.csv')
+            #     f'')
 
             df_csv_fixed = df_csv.iloc[::2]
             df_csv_fixed = df_csv_fixed.reset_index()
@@ -108,10 +108,10 @@ def deviation():
 
             file_counter += 1
 
-    name_dir_plot = f'slab_tracking_script/BigData_deviation_parquet_plot_{c[8:10]}'
+    name_dir_plot = f''
     if not os.path.exists(name_dir_plot):
         os.mkdir(name_dir_plot)
-    filename_plot = f'slab_deviation_plot_2023-08-{c[8:10]}.parquet'
+    filename_plot = f''
     fullname_plot = os.path.join(name_dir_plot, filename_plot)
 
     table = pa.Table.from_pandas(slab_deviation_track)
